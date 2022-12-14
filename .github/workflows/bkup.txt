@@ -19,13 +19,4 @@ jobs:
         run: npm install
 
       - name: Run the tests
-        run: npm test -- --coverage
-
-      - uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/clover.xml
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: true
-          verbose: true
+        run: npm test # -- --coverage
