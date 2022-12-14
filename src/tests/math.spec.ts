@@ -1,4 +1,4 @@
-import {add} from "../math";
+import {add, substract} from "../math";
 
 
 describe.each([
@@ -12,4 +12,18 @@ describe.each([
         expect(add(a,b)).toBe(expected);
     })
 });
+
+
+describe.each([
+        [2,2,0],
+        [4,5,-1],
+        [9,2,7],
+        [9,4,5]
+    ]
+)("Test subtraction", (a,b,expected)=> {
+    test(`${a} - ${b} = ${expected}`,()=>{
+        expect(substract(a,b)).toBe(expected);
+    })
+});
+
 
