@@ -22,3 +22,11 @@ export function divide(a:number,b:number):number{
 export function multiply(a:number,b:number):number{
     return a*b;
 }
+
+export function multiplyMany(...numbers:Array<number>):number{
+    let product=0;
+    for(let number of numbers){
+        product *=number;
+    }
+    return product;
+}
